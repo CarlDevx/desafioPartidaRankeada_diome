@@ -21,9 +21,10 @@ class Match{
         {level:"Lendário", min:91, max:100},
         {level:"Imortal", min:101, max:99999}];
         classifyHeroRanking(hero){
-            const heroVictoryAverage = (hero.getVictories - hero.getDefeats);
-            for (const level = 0; level < this.#rankingLevels.length; level++){
-                if (heroVictoryAverage >= this.#rankingLevels[i].min && heroVictoryAverage <= this.#rankingLevels[i].max){
+            let heroVictoryAverage = (hero.getVictories() - hero.getDefeats());
+            //console.log(heroVictoryAverage)
+            for (let level = 0; level < this.#rankingLevels.length; level++){
+                if (heroVictoryAverage >= this.#rankingLevels[level].min && heroVictoryAverage <= this.#rankingLevels[level].max){
                     console.log(`O Herói tem de saldo de ${heroVictoryAverage} está no nível de ${this.#rankingLevels[level].level}`)
                     return
                 }
@@ -31,6 +32,6 @@ class Match{
         }
 }
 
-let heroi1 = new Hero("Axel",12,1);
+let heroi1 = new Hero("Axel",120,0);
 let Partida1 = new Match();
 Partida1.classifyHeroRanking(heroi1);
