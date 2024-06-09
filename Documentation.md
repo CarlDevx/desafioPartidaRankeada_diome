@@ -28,7 +28,7 @@
 >
 > |Método|Retorno|Descrição|
 > |:---:|:---:|:---|
-> |classifyPlayerRanking()|Sem retorno (_void_)|Função que imprime o ranking atual do herói após fazer o calculo para determinar o ranking do mesmo.
+> |classifyHeroRanking()|Sem retorno (_void_)|Função que imprime o ranking atual do herói após fazer o calculo para determinar o ranking do mesmo.
 ---
 
 
